@@ -25,8 +25,7 @@ const products =
         title: "Airpods",
         price : 250
 
-    }
-    ,
+    },
     {
         title : "Charger",
         price : 150
