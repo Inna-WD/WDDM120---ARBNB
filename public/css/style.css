@@ -1,4 +1,8 @@
 body
 {
-    background-color: red;
+    background-image: url("/img/back2.jpg");
+    background-repeat: no-repeat;
+    font-family: 'Antic', sans-serif;
+    background-size: 80em 60em;
 }
+
