@@ -1,128 +1,59 @@
-/*
-    1. Create a Web Server  that listens to HTTP request
-    2. Code our Web Server to respond to specific HTTP Request
-    3. Generate response to our client
-
-*/
-
-
-//import express into our file
 const express = require("express");
+const exphbs  = require('express-handlebars');
 
-
-//create express app object
 const app = express();
 
+//This allows express to make my static content avialable from the public
+app.use(express.static('public'))
 
+//This tells Express to set or register Handlebars as its' Template/View Engine
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
-
+//set up routes
 app.get("/",(req,res)=>{
-    
-    let htmlPage =
-    `
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <title>About Us </title>
-                <meta charset="UTF-8">
-            </head>
-            <body>
-                <h2> Home page </h2>
-                <p>
-                    Home
-                </p>
-            </body>
-        </html>
-    `
-
-    res.send(htmlPage);
-
+    res.render("index",{
+        title: "Home",
+        headingInfo : "Home Page",
+        randomContent: "BLAH BLAH BLHA"
+    })
 });
 
+app.get("/contact-us",(req,res)=>{
+    res.render("contactus",{
+        title: "Contact Us",
+        headingInfo : "Contact Us Page",
 
-app.get("/about",(req,res)=>{
-
-
-    let htmlPage =
-    `
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <title>About Us </title>
-                <meta charset="UTF-8">
-            </head>
-            <body>
-                <h2> About Us page </h2>
-                <p>
-                    Testing
-                </p>
-            </body>
-        </html>
-    `
-    res.send(htmlPage);
-});
-
-
-
-app.get("/product",(req,res)=>{ 
-    
-    //fake database
-    const products = 
-[
-    {
-        title  : "Iphone",
-        price : 1500
-    }
-    ,
-    {
-        title: "Airpods",
-        price : 250
-
-    }
-    ,
-    {
-        title : "Charger",
-        price : 150
-    }
-    
-];
-
-    let urlString=``;
-    products.forEach(prod => {
-         urlString+= `<li> ${prod.title}</li>
-                        <li> ${prod.price}</li>` ;
-
-    
     });
-    
-
-    const htmlPage=
-    `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Product</title>
-    </head>
-    <body>
-            <ul> ${urlString} </ul>
-        
-    </body>
-    </html>
-    `;
-
-    res.send(htmlPage);
 
 
+});
+
+app.get("/products",(req,res)=>{
+    const fakeDB= [];
+
+    fakeDB.push({title:'XPS 13',description:`Our smallest 13-inch laptops feature a virtually 
+    borderless InfinityEdge display and up to 10th gen Intel® processors. 
+    Touch, silver, rose gold and frost options available
+    `,price:`1349.99`});
+
+    fakeDB.push({title:'XPS 15',description:`Powerhouse performance with the latest processors and NVIDIA 
+    graphics paired with a stunning 4K Ultra HD display.`,price:`1749.99`});
+
+    fakeDB.push({title:'XPS 17',description:`XPS 17 is designed to keep you entertained for more than 9 hours 
+    with a 9-cell battery upgrade.`,price:`1949.99`});
 
 
-})
+    res.render("products",{
+        title: "Products",
+        headingInfo : "Products Page",
+        products : fakeDB
 
+    });
+});
 
-
-//This creates a web server!!!!!!
+const PORT=3000;
 app.listen(3000,()=>{
 
-    console.log(`Web Server connected!!!`);
+    console.log(`Web server is up and running`)
 })
