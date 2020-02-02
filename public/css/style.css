@@ -3,6 +3,28 @@ body
     background-image: url("/img/back2.jpg");
     background-repeat: no-repeat;
     font-family: 'Antic', sans-serif;
-    background-size: 80em 60em;
+    background-size: auto;
 }
+
+
+.block {
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 20em;
+    margin: 1em 0;
+    padding: 0.4em;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+
+  .house-img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 18em;
+    align-content: center;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
 

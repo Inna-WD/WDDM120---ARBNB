@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 
 //This allows express to make my static content available from the public
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //This tells Express to set or register Handlebars as its' Template/View Engine
 app.engine('handlebars', exphbs());
@@ -24,28 +24,29 @@ app.get("/contact-us", (req, res) => {
         headingInfo: "Contact Us Page",
     });
 });
-// app.get("/index", (req, res) => {
-//     res.render("index", {
-//         title: "Index Page",
-//         headingInfo: "Index",
-//     });
-// });
 
 app.get("/products", (req, res) => {
     const fakeDB = [];
+// listings
 
     fakeDB.push({
-        title: 'Island house', description: `Our rearest listing. Green house in the middle of the lake Hgtamik`, price: `256.00`, image: '/img/1.jpg'
+        title: 'Island house', description: `Our rearest listing. Green house in the middle of the lake Hgtamik`, price: `256`, image: '/img/1.jpg'
     });
 
     fakeDB.push({
-        title: 'XPS 15', description: `Powerhouse performance with the latest processors and NVIDIA 
-    graphics paired with a stunning 4K Ultra HD display.`, price: `1749.99`
+        title: 'Student unit by designer', description: `Perfect unit for the student who wishes studing get away`, price: `178`, image: '/img/2.jpg'
     });
 
     fakeDB.push({
-        title: 'XPS 17', description: `XPS 17 is designed to keep you entertained for more than 9 hours 
-    with a 9-cell battery upgrade.`, price: `1949.99`
+        title: 'Family cabin', description: `Family cabin for a big-medium-small size family. Bring them all`, price: `165`, image: '/img/3.jpg'
+    });
+
+    fakeDB.push({
+        title: 'Hobbit house 1', description: `Like "Lord of the rings?" This is a place for you`, price: `211`, image: '/img/4.jpg'
+    });
+
+    fakeDB.push({
+        title: 'Hign and awesome', description: `Disgn house just in the heart of the city`, price: `298`, image: '/img/5.jpg'
     });
 
     res.render("products", {
