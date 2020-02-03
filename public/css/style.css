@@ -6,7 +6,6 @@ body
     background-size: auto;
 }
 
-
 .block {
     background-color: white;
     display: inline-block;
@@ -26,5 +25,17 @@ body
     width: 18em;
     align-content: center;
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+  .navigationBar{
+    /* height: 5em; */
+    background-color: #00475A;
+    font-size: 2em;
+    color: white;
+    padding: 2em;
+  
+  }
+  a{
+    color:white;
+    marging 0 1em;
   }
 
