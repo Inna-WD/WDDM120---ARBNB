@@ -46,7 +46,7 @@ app.get("/products", (req, res) => {
     });
 
     fakeDB.push({
-        title: 'Hign and awesome', description: `Disgn house just in the heart of the city`, price: `298`, image: '/img/5.jpg'
+        title: 'High and awesome', description: `Design house just in the heart of the city`, price: `298`, image: '/img/5.jpg',people: '6'
     });
 
     res.render("products", {
