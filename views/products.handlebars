@@ -1,20 +1,19 @@
 {{#each products }}
 <div class="block">
-    <p>
-        Title: {{this.title}}
+    <p class="listing-title">
+        {{this.title}}
     </p>
-
     <p>
-        Description: {{this.description}}
+        {{this.description}}
     </p>
-    <p >
+    <p>
         <img class="house-img" src="{{this.image}}">
     </p>
-        <p>
-        Accomodates: {{this.beds}}  
+    <p>
+        Accomodates: {{this.beds}}
     </p>
-        <p>
-        Price/night: ${{this.price}}
-</p>
+    <p>
+       $ {{this.price}}  
+    </p>
 </div>
 {{/each}}

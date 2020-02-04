@@ -1,9 +1,11 @@
 body
 {
-    background-image: url("/img/back2.jpg");
+    background-image: url("/img/back3.jpg");
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Antic', sans-serif;
-    background-size: auto;
+    /* background-size: auto; */
 }
 
 .block {
@@ -14,9 +16,8 @@ body
     margin: 1em 0;
     padding: 0.4em;
     border-radius: 2px;
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 2px 1px #230d07;
   }
-
 
   .house-img {
     border: 1px solid #ddd;
@@ -24,18 +25,25 @@ body
     padding: 5px;
     width: 18em;
     align-content: center;
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 2px 1px #230d07;
   }
   .navigationBar{
     /* height: 5em; */
-    background-color: #00475A;
-    font-size: 2em;
+    background-color: #230d07;
+    font-size: 1.1em;
     color: white;
     padding: 2em;
-  
-  }
+    align-items: right;
+    vertical-align: middle;
+    
+    }
   a{
     color:white;
     marging 0 1em;
   }
 
+.listing-title{
+font-style: bold;
+font-size: 1.5em;
+color: #ad4120;
+}

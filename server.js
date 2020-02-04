@@ -42,11 +42,12 @@ app.get("/products", (req, res) => {
     });
 
     fakeDB.push({
-        title: 'Hobbit house 1', description: `Like "Lord of the rings?" This is a place for you`, price: `211`, image: '/img/4.jpg',beds: '8'
+        title: 'Hobbit house 1', description: 
+        `Like "Lord of the rings?" This is a vacation place just for you`, price: `211`, image: '/img/4.jpg',beds: '8'
     });
 
     fakeDB.push({
-        title: 'High and awesome', description: `Design house just in the heart of the city`, price: `298`, image: '/img/5.jpg',beds: '6'
+        title: 'High and awesome', description: `Stylish designer house just in the heart of the city`, price: `298`, image: '/img/5.jpg',beds: '6'
     });
 
     res.render("products", {
