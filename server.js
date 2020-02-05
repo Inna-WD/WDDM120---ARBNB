@@ -1,62 +1,51 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
 const app = express();
-
-//This allows express to make my static content available from the public
 app.use(express.static('public'));
-
-//This tells Express to set or register Handlebars as its' Template/View Engine
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-//set up routes
+
+
+
+
 app.get("/", (req, res) => {
-    res.render("index", {
+    res.render("home", {
         title: "Home",
         headingInfo: "Home Page",
-        randomContent: "BLAH BLAH BLHA"
+        randomContent: "Lorem Ipsum"
     });
 });
 
-app.get("/contact-us", (req, res) => {
-    res.render("contactus", {
-        title: "Contact Us",
-        headingInfo: "Contact Us Page",
-    });
-});
 
-app.get("/products", (req, res) => {
-    const fakeDB = [];
-// listings
-
-    fakeDB.push({
-        title: 'Island house', description: `Our rearest listing. Green house in the middle of the lake Hgtamik`, price: `256`, image: '/img/1.jpg',beds: '2'
-    });
-
-    fakeDB.push({
-        title: 'Student unit by designer', description: `Perfect unit for the student who wishes studing get away`, price: `178`, image: '/img/2.jpg',beds: '4'
-    });
-
-    fakeDB.push({
-        title: 'Family cabin', description: `Family cabin for a big-medium-small size family. Bring them all`, price: `165`, image: '/img/3.jpg',beds: '6'
-    });
-
-    fakeDB.push({
-        title: 'Hobbit house 1', description: 
-        `Like "Lord of the rings?" This is a vacation place just for you`, price: `211`, image: '/img/4.jpg',beds: '8'
-    });
-
-    fakeDB.push({
-        title: 'High and awesome', description: `Stylish designer house just in the heart of the city`, price: `298`, image: '/img/5.jpg',beds: '6'
-    });
-
-    res.render("products", {
-        title: "Products",
-        headingInfo: "Products Page",
-        products: fakeDB
+app.get("/sms", (req, res) => {
+    res.render("sms", {
+        title: "SMS Page",
 
     });
 });
+
+app.post("/sms", (req, res) => {
+req.body.firstName
+
+});
+
+
+
+
+const accountSid = 'e48fe1c9c89a23308600530343690c22';
+const authToken = 'your_auth_token';
+const client = require('twilio')(accountSid, authToken);
+
+client.messages
+  .create({
+     body: '${req.body.message}',
+     from: '+16036050011',
+     to: '${req.body.number}'.
+   })
+  .then(message => console.log(message.sid));
+
+
 
 const PORT = 3000;
 app.listen(3000, () => {
