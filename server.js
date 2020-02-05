@@ -43,7 +43,10 @@ client.messages
      from: '+16036050011',
      to: '${req.body.number}'.
    })
-  .then(message => console.log(message.sid));
+  .then(message => {
+      
+    
+    console.log(message.sid)});
 
 
 
