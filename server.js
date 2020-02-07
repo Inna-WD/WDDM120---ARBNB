@@ -9,14 +9,7 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-//set up routes
-app.get("/", (req, res) => {
-    res.render("index", {
-        title: "Home",
-        headingInfo: "Home Page",
-        randomContent: "BLAH BLAH BLHA"
-    });
-});
+
 
 app.get("/contact-us", (req, res) => {
     res.render("contactus", {
@@ -41,13 +34,10 @@ app.get("/products", (req, res) => {
         title: 'Family cabin', description: `Family cabin for a big-medium-small size family. Bring them all`, price: `165`, image: '/img/3.jpg',beds: '6'
     });
 
-    // fakeDB.push({
-    //     title: 'Hobbit house 1', description: 
-    //     'Lord of the rings? fan This is a vacation place just for you`,  price: `165`, image: '/img/3.jpg',beds: '6'
-    // });
+
 
     fakeDB.push({
-        title: 'Hobbit house 1', description: `Lord of the rings? fan This is a vacation place just for you`, price: `165`, image: '/img/3.jpg',beds: '6'
+        title: 'Hobbit house 1', description: `Lord of the rings? fan This is a vacation place just for you`, price: `165`, image: '/img/4.jpg',beds: '6'
     });
 
     fakeDB.push({
@@ -63,7 +53,7 @@ app.get("/products", (req, res) => {
     });
 
     fakeDB.push({
-        title: 'Bus or RV?', description: `Cosy and stylish, simple but well equipped, this bus is what you need for the weekend`, price: `158`, image: '/img/7.jpg',beds: '2'
+        title: 'Bus or RV?', description: `Cosy and stylish, simple but well equipped, this bus is what you need for the weekend`, price: `121`, image: '/img/8.jpg',beds: '2'
     });
 
     res.render("products", {
