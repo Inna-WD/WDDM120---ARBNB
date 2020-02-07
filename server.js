@@ -10,7 +10,6 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 
-
 app.get("/contact-us", (req, res) => {
     res.render("contactus", {
         title: "Contact Us",
@@ -33,8 +32,6 @@ app.get("/products", (req, res) => {
     fakeDB.push({
         title: 'Family cabin', description: `Family cabin for a big-medium-small size family. Bring them all`, price: `165`, image: '/img/3.jpg',beds: '6'
     });
-
-
 
     fakeDB.push({
         title: 'Hobbit house 1', description: `Lord of the rings? fan This is a vacation place just for you`, price: `165`, image: '/img/4.jpg',beds: '6'
