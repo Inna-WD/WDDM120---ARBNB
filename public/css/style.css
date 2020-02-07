@@ -27,6 +27,11 @@ body
     align-content: center;
     box-shadow: 0 0 2px 1px #230d07;
   }
+.icon-img {
+    width: 2em;
+    align-content: center;
+   
+  }
   .navigationBar{
     /* height: 5em; */
     background-color: #230d07;
@@ -40,11 +45,29 @@ body
     
   a{
     color:white;
-    marging 0 1em;
+    margin: 0 1em;
   }
 
 .listing-title{
 font-style: bold;
 font-size: 1.5em;
 color: #ad4120;
+}
+
+
+/* formatiing the HOME PAGE form */
+.block-form{
+  background-color: rgb(224, 218, 218);
+  display: inline-block;
+  overflow: hidden;
+  min-width: 30em;
+  max-width: 50em;
+  margin: 1em 0;
+  padding: 0.4em;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px #230d07;
+}
+
+.field-size{
+  width: 20em;
 }
