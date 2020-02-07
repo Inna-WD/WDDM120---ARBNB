@@ -41,9 +41,13 @@ app.get("/products", (req, res) => {
         title: 'Family cabin', description: `Family cabin for a big-medium-small size family. Bring them all`, price: `165`, image: '/img/3.jpg',beds: '6'
     });
 
+    // fakeDB.push({
+    //     title: 'Hobbit house 1', description: 
+    //     'Lord of the rings? fan This is a vacation place just for you`,  price: `165`, image: '/img/3.jpg',beds: '6'
+    // });
+
     fakeDB.push({
-        title: 'Hobbit house 1', description: 
-        '"Lord of the rings? fan" This is a vacation place just for you`, price: `211`, image: '/img/4.jpg',beds: '8'
+        title: 'Hobbit house 1', description: `Lord of the rings? fan This is a vacation place just for you`, price: `165`, image: '/img/3.jpg',beds: '6'
     });
 
     fakeDB.push({
@@ -51,8 +55,17 @@ app.get("/products", (req, res) => {
     });
 
     fakeDB.push({
-        title: 'On the cliff', description: `Gate`, price: `312`, image: '/img/6.jpg',beds: '3'
+        title: 'On the cliff', description: `Get way in the middle of the nowhere. Exclusive opportunity to relax`, price: `312`, image: '/img/6.jpg',beds: '3'
     });
+
+    fakeDB.push({
+        title: 'Stylish container', description: `Great opportunity to explore the nature, relax and meditate`, price: `158`, image: '/img/7.jpg',beds: '2'
+    });
+
+    fakeDB.push({
+        title: 'Bus or RV?', description: `Cosy and stylish, simple but well equipped, this bus is what you need for the weekend`, price: `158`, image: '/img/7.jpg',beds: '2'
+    });
+
     res.render("products", {
         title: "Products",
         headingInfo: "Products Page",
