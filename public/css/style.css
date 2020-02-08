@@ -1,11 +1,35 @@
+
+/* navigation bar */
+
+.navigationBar{
+  /* height: 5em; */
+  height:6vh;
+  background-color: #230d07;
+  font-size: 1.1em;
+  color: white;
+  padding: 2em;
+  align-items: right;
+  vertical-align: middle;
+  
+  }
+  
+a{
+  color:white;
+  margin: 0 1em;
+}
+
+/* body and listings */
 body
 {
     background-image: url("/img/back4.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    max-height: 50em;
     font-family: 'Antic', sans-serif;
     /* background-size: auto; */
+    background-attachment: fixed;
+    transition: all 0.7s ease-in;
+
 }
 
 .block {
@@ -14,38 +38,24 @@ body
     overflow: hidden;
     max-width: 20em;
     margin: 1em 0;
-    padding: 0.4em;
+    padding: 0.6em;
     border-radius: 2px;
     box-shadow: 0 0 2px 1px #230d07;
   }
 
   .house-img {
     border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    border-radius: 2px;
+    padding: .5em;
     width: 18em;
     align-content: center;
-    box-shadow: 0 0 2px 1px #230d07;
+    /* box-shadow: 0 0 2px 1px #230d07; */
   }
+
 .icon-img {
     width: 2em;
     align-content: center;
    
-  }
-  .navigationBar{
-    /* height: 5em; */
-    background-color: #230d07;
-    font-size: 1.1em;
-    color: white;
-    padding: 2em;
-    align-items: right;
-    vertical-align: middle;
-    
-    }
-    
-  a{
-    color:white;
-    margin: 0 1em;
   }
 
 .listing-title{
@@ -60,7 +70,7 @@ color: #ad4120;
   background-color: rgb(224, 218, 218);
   display: inline-block;
   overflow: hidden;
-  min-width: 30em;
+  min-width: 20em;
   max-width: 50em;
   margin: 1em 0;
   padding: 0.4em;
@@ -73,8 +83,29 @@ color: #ad4120;
 }
 
 .icon-size{
-
     width: 2em;
     align-content: center;
    
 }
+
+/* formatting the footer  */
+.footer{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: auto;
+  background-color: #230d07;
+  font-size: 0.8em;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+  padding: 1em;
+  }
+
+  .footer-footer{
+    height: 3em;
+    background-color: black;
+    color: white;
+    text-align: middle;
+    overflow: hidden;
+    padding: 1em;
+    }
