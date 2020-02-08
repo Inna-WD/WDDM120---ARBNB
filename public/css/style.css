@@ -1,21 +1,51 @@
 
 /* navigation bar */
-
 .navigationBar{
   /* height: 5em; */
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   height:6vh;
   background-color: #230d07;
   font-size: 1.1em;
   color: white;
   padding: 2em;
-  align-items: right;
+  align-items: center;
   vertical-align: middle;
   
   }
   
-a{
+ .button{
+width: 8em;
+height: 2em;
+font-size: 1.5em;
+background-color: rgb(236, 134, 17);
+border-width: 1px;
+border-color:  rgb(236, 134, 17);
+ } 
+ .button:hover{
+   background-color:rgb(211, 191, 8);
+   border-color:rgb(211, 191, 8);
+ }
+
+
+.title{
+  font-size: 1.5em;
   color:white;
-  margin: 0 1em;
+  text-decoration: none;
+}
+
+.title:hover{
+  color:rgb(211, 191, 8);
+}
+
+a{
+  font-size: 0.8em;
+  color:white;
+  text-decoration: none;
+}
+
+a:hover{
+  color:rgb(211, 191, 8);
 }
 
 /* body and listings */
@@ -28,8 +58,6 @@ body
     font-family: 'Antic', sans-serif;
     /* background-size: auto; */
     background-attachment: fixed;
-    transition: all 0.7s ease-in;
-
 }
 
 .block {
@@ -41,6 +69,15 @@ body
     padding: 0.6em;
     border-radius: 2px;
     box-shadow: 0 0 2px 1px #230d07;
+  }
+
+  .block:hover {
+    background-color: rgb(207, 235, 207);
+    border: 10 px;
+    border-color: green;
+    box-shadow: 0 0 2px 1px green;
+    transition: background-color 500ms ease-out 500ms
+   
   }
 
   .house-img {
