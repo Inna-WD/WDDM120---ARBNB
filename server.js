@@ -19,11 +19,11 @@ app.get("/", (req, res) => {
 });
 app.get("/contact-us", (req, res) => {
     res.render("contactus", {
-        title: "Contact Us",
-        headingInfo: "Contact Us Page",
+        title: "About MNV",
+        headingInfo: "About MNV Page",
     });
 });
-    // listings db
+ // listings db
 app.get("/products", (req, res) => {
     const fakeDB = [];
     fakeDB.push({
@@ -164,12 +164,14 @@ app.get("/products", (req, res) => {
         
     });   
     res.render("products", {
-        title: "Products",
-        headingInfo: "Products Page",
+        title: "Listings",
+        headingInfo: "Listings Page",
         products: fakeDB
 
     });
 });
+
+
 
 const PORT = 3000;
 app.listen(3000, () => {

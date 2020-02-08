@@ -1,7 +1,6 @@
 
 /* navigation bar */
 .navigationBar{
-  /* height: 5em; */
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   height:6vh;
@@ -27,11 +26,11 @@ border-color:  rgb(236, 134, 17);
    border-color:rgb(211, 191, 8);
  }
 
-
 .title{
   font-size: 1.5em;
   color:white;
   text-decoration: none;
+  text-align: center;
 }
 
 .title:hover{
@@ -48,6 +47,13 @@ a:hover{
   color:rgb(211, 191, 8);
 }
 
+.page-header{
+  font-size: 3em;
+  color:white;
+  align-self: auto;
+  background-color: rgb(156, 156, 156, 0.5);
+ text-align: center;
+}
 /* body and listings */
 body
 {
@@ -123,6 +129,24 @@ color: #ad4120;
     width: 2em;
     align-content: center;
    
+}
+
+/* info section  */
+.info{
+background-color: rgb(4,48,5, 0.5);
+width: auto;
+overflow: hidden;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* banner */
+.banner{
+  background-color: #043005;
+  height: 150px;
+  width: auto;
+  overflow: hidden;
+  text-align: center;
 }
 
 /* formatting the footer  */
