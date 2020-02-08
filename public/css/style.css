@@ -1,5 +1,6 @@
-
+/* ------------------------------------------------------------------------- */
 /* navigation bar */
+/* ------------------------------------------------------------------------- */
 .navigationBar{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -10,8 +11,7 @@
   padding: 2em;
   align-items: center;
   vertical-align: middle;
-  
-  }
+    }
   
  .button{
 width: 8em;
@@ -32,7 +32,6 @@ border-color:  rgb(236, 134, 17);
   text-decoration: none;
   text-align: center;
 }
-
 .title:hover{
   color:rgb(211, 191, 8);
 }
@@ -46,7 +45,9 @@ a{
 a:hover{
   color:rgb(211, 191, 8);
 }
-
+/* ------------------------------------------------------------------------- */
+/* page header*/
+/* ------------------------------------------------------------------------- */
 .page-header{
   font-size: 3em;
   color:white;
@@ -54,7 +55,9 @@ a:hover{
   background-color: rgb(156, 156, 156, 0.5);
  text-align: center;
 }
-/* body and listings */
+/* ------------------------------------------------------------------------- */
+/* body*/
+/* ------------------------------------------------------------------------- */
 body
 {
     background-image: url("/img/back4.jpg");
@@ -65,7 +68,9 @@ body
     /* background-size: auto; */
     background-attachment: fixed;
 }
-
+/* ------------------------------------------------------------------------- */
+/* listings */
+/* ------------------------------------------------------------------------- */
 .block {
     background-color: white;
     display: inline-block;
@@ -107,8 +112,10 @@ font-size: 1.5em;
 color: #ad4120;
 }
 
-
+/* ------------------------------------------------------------------------- */
 /* formatiing the HOME PAGE form */
+/* ------------------------------------------------------------------------- */
+
 .block-form{
   background-color: rgb(224, 218, 218);
   display: inline-block;
@@ -131,7 +138,10 @@ color: #ad4120;
    
 }
 
-/* info section  */
+/* ------------------------------------------------------------------------- */
+/* info section*/
+/* ------------------------------------------------------------------------- */
+
 .info{
 background-color: rgb(4,48,5, 0.5);
 width: auto;
@@ -140,7 +150,11 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-/* banner */
+
+/* ------------------------------------------------------------------------- */
+/* banner*/
+/* ------------------------------------------------------------------------- */
+
 .banner{
   background-color: #043005;
   height: 150px;
@@ -149,7 +163,10 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
 }
 
-/* formatting the footer  */
+
+/* ------------------------------------------------------------------------- */
+/* footer */
+/* ------------------------------------------------------------------------- */
 .footer{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

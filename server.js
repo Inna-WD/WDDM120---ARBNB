@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
 
     });
 });
-app.get("/contact-us", (req, res) => {
-    res.render("contactus", {
-        title: "About MNV",
-        headingInfo: "About MNV Page",
+app.get("/sign-in", (req, res) => {
+    res.render("signin", {
+        title: "Sign In",
+        headingInfo: "Sign In  Page",
     });
 });
  // listings db
