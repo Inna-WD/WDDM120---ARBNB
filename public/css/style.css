@@ -56,7 +56,7 @@ a:hover{
  text-align: center;
 }
 /* ------------------------------------------------------------------------- */
-/* body*/
+/* home page body*/
 /* ------------------------------------------------------------------------- */
 body
 {
@@ -187,3 +187,36 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     overflow: hidden;
     padding: 1em;
     }
+
+/* ------------------------------------------------------------------------- */
+/* footer */
+/* ------------------------------------------------------------------------- */
+
+    .signInBlock {
+      background-color: rgb(224, 218, 218);
+      display: inline-block;
+            /* overflow: hidden; */
+      align-self: center;
+      align-content: center;
+      min-width: 20em;
+      max-width: 50em;
+      margin: 1em 0;
+      padding: 0.4em;
+      border-radius: 2px;
+      box-shadow: 0 0 2px 1px #230d07;
+    }
+    
+    .field-font{
+      font-family: 'Antic', sans-serif;
+      size: 1em;
+      padding: 1em;
+      margin:0.5em 1em;
+      align-content: center;
+      width: 30em;
+    }
+ 
+    .social{
+      width: 2em;;
+    }
+  
+  
