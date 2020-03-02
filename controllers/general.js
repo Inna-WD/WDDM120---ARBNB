@@ -27,8 +27,31 @@ router.get("/contact-us", (req, res) => {
     res.render("contactus");
 });
 router.post("/contact-us", (req, res) => {
-    // res.render();
+
+    const { firstName, lastName, phone, email, message } = req.body;
+    // console.log(req.body);
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey("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");
+    const msg = {
+        to: `inna.druker@gmail.com`,
+        from: `${email}`,
+        subject: 'Contact Us Form Submit',
+        html: `Visitor's Full Name ${firstName} ${lastName}<br>
+            Visitor's email address ${email}<br>
+            Mobile ${phone}<br>
+            Message: ${message}`
+        ,
+    };
+    sgMail.send(msg)
+        .then(() => {
+            res.redirect("/");
+        })
+        .catch(err => { 
+            console.log(`Error ${err}`);
+        })
 });
 
+//
 
-module.exports=router;
+
+module.exports = router;
