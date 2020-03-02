@@ -30,15 +30,15 @@ app.get("/sign-in", (req, res) => {
     });
 });
 app.post("/sign-in", (req, res) => {
-    res.render();
+    // res.render();
 });
 
 // CONTACT US
 app.get("/contact-us", (req, res) => {
-    res.render();
+    res.render("contactus");
 });
 app.post("/contact-us", (req, res) => {
-    res.render();
+    // res.render();
 });
 
 
