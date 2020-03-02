@@ -22,7 +22,7 @@ router.post("/sign-in", (req, res) => {
     // res.render();
 });
 
-// CONTACT US
+// CONTACT US page
 router.get("/contact-us", (req, res) => {
     res.render("contactus");
 });

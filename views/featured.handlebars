@@ -1,0 +1,34 @@
+{{#each featured }}
+<div class="block">
+    <p class="listing-title">
+        {{this.title}}
+    </p>
+    <p>
+        {{this.description}}
+    </p>
+    <p>
+        <img class="house-img" src="{{this.image}}">
+    </p>
+    <p>
+        <img class="icon-img"  src="{{this.icon1}}" >
+        <img class="icon-img" src="{{this.icon2}}">
+        <img class="icon-img" src="{{this.icon3}}">
+        <img class="icon-img" src="{{this.icon4}}">
+        <img class="icon-img" src="{{this.icon5}}">
+        <img class="icon-img" src="{{this.icon6}}">
+        <img class="icon-img" src="{{this.icon7}}">
+        <img class="icon-img" src="{{this.icon8}}">
+        <img class="icon-img" src="{{this.icon9}}">
+        <img class="icon-img" src="{{this.icon10}}">
+        <img class="icon-img" src="{{this.icon11}}">
+
+    </p>
+    <p>
+        Accomodates: {{this.beds}}
+    </p>
+    <p>
+      Price:  ${{this.price}}
+
+    </p>
+</div>
+{{/each}}

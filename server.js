@@ -5,7 +5,7 @@ const app = express();
 
 //This allows express to make my static content available from the public
 app.use(express.static('public'));
-app.use("/")
+
 
 
 //This tells Express to set or register Handlebars as its' Template/View Engine
@@ -17,14 +17,16 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //load controllers
 const generalController = require("./controllers/general");
 const productController = require("./controllers/product");
-
+const featuredController = require("./controllers/featured");
 //map each controller to the app object
 
 app.use("/",generalController);
-app.use("/product",productController);
+app.use("/",productController);
+app.use("/",featuredController);
 
-
+///sets up server
 const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Web server is up and running`)
-})
+app.listen(PORT,()=>{
+
+    console.log(`Web Server is up and running`);    
+});

@@ -123,4 +123,4 @@ const product =
     }
 }
 product.init();
-module.exports=product;
+module.exports = product;
