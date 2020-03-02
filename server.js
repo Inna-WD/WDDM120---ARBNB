@@ -33,6 +33,15 @@ app.post("/sign-in", (req, res) => {
     res.render();
 });
 
+// CONTACT US
+app.get("/contact-us", (req, res) => {
+    res.render();
+});
+app.post("/contact-us", (req, res) => {
+    res.render();
+});
+
+
 
 
 
