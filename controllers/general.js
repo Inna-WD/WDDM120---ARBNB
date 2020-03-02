@@ -31,7 +31,7 @@ router.post("/contact-us", (req, res) => {
     const { firstName, lastName, phone, email, message } = req.body;
     // console.log(req.body);
     const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey("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");
+    sgMail.setApiKey(process.env.send_grip_api_key);
     const msg = {
         to: `inna.druker@gmail.com`,
         from: `${email}`,

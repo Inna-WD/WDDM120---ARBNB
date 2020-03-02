@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+require('dotenv').config({path:"./config/keys.env"});
 const app = express();
 
 //This allows express to make my static content available from the public
@@ -25,7 +26,7 @@ app.use("/",productController);
 app.use("/",featuredController);
 
 ///sets up server
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.listen(PORT,()=>{
 
     console.log(`Web Server is up and running`);    
