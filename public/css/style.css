@@ -226,14 +226,15 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   
     @media only screen and (max-width: 400px) {
       .navigationBar{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        height:2vh;
-        background-color: #230d07;
-        font-size: 0.3em;
-        color: white;
-        padding: 2em;
-        align-items: center;
-        vertical-align: middle;
+          background-color: white;      
           }
+
+          .footer-footer{
+            height: 1em;
+            background-color: black;
+            color: white;
+            text-align: middle;
+            overflow: hidden;
+            padding: 0.5em;
+            }
     }
