@@ -21,6 +21,17 @@ const productController = require("./controllers/product");
 const featuredController = require("./controllers/featured");
 //map each controller to the app object
 
+
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+console.log(`Connected to MongoDB`);
+})
+.catch(err=>console.log(`Error occured when connected to db ${err}`));
+
+
+
+
 app.use("/",generalController);
 app.use("/",productController);
 app.use("/",featuredController);
