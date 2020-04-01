@@ -46,12 +46,11 @@ router.post("/contact-us", (req, res) => {
         .then(() => {
             res.redirect("/");
         })
-        .catch(err => { 
+        .catch(err => {
             console.log(`Error ${err}`);
         })
 });
 
 //
-
 
 module.exports = router;

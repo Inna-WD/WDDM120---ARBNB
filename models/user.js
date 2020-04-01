@@ -1,30 +1,26 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // schema for the rooms listings - documents
-const roomSchema = new Schema({
-    title: {
+const userSchema = new Schema({
+    firstName: {
         type: String,
         require: true
     },
-    description: {
+    LastName: {
         type: String,
         require: true
     },
-    price: {
+    phone: {
         type: number,
         require: true
     },
-    location: {
+    email: {
         type: String,
         require: true
     },
     type: {
         type: String,
-        default: "Regular"
-    },
-    photo: {
-        type: String,
-        require: false
+        default: "New"
     },
     dateCreated: {
         type: Date,
@@ -35,5 +31,5 @@ const roomSchema = new Schema({
     }
 });
 
-const roomModel = mongoose.model('Rooms', roomSchema);
-module.exports = roomModel;
+const userModel = mongoose.model('User', userSchema);
+module.exports = userModel;
