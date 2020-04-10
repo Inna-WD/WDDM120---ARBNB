@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('dotenv').config({path:"./config/keys.env"});
+
 const app = express();
 
 //This allows express to make my static content available from the public
@@ -13,6 +14,7 @@ app.use(express.static('public'));
 //This tells Express to set or register Handlebars as its' Template/View Engine
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
 //parse application
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -20,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const generalController = require("./controllers/general");
 const productController = require("./controllers/product");
 const featuredController = require("./controllers/featured");
+const roomController = require("./controllers/room");
+
 //map each controller to the app object
 
 
@@ -36,7 +40,10 @@ console.log(`Connected to MongoDB`);
 app.use("/",generalController);
 app.use("/",productController);
 app.use("/",featuredController);
-
+app.use("/",roomController);
+app.use("/",(req,res)=>{
+    res.render("general/404");
+});
 ///sets up server
 const PORT = process.env.PORT;
 app.listen(PORT,()=>{

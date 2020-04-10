@@ -1,9 +1,8 @@
-   <h2>Add Room</h2>
-    
-    <form method="POST" action="/room/add">
+ <h2>Update Room</h2>
+    <form method="POST" action="">
 
         <label>Title</label>
-        <input type="text" name="title" id="title"> <br><br>
+        <input type="text" name="title" id="title" > <br><br>
 
         <label>Description</label>
         <textarea id="description" name="description"></textarea><br><br>
@@ -13,20 +12,19 @@
 
         <label>Priority</label>
         <select name="priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="High">High</option>
+            <option value="low" >Low</option>
+            <option value="medium" >Medium</option>
+            <option value="high" >High</option>
         </select>
         <br><br>
 
-        <label>Status</label> : Open
-       <!-- <select name="status">
+        <label>Status</label>
+        <select name="status">
             <option value="open">Open</option>
             <option value="hold">On Hold</option>
             <option value="completed">Completed</option>
-        </select>-->
+        </select>
         <br><br>
 
-        <input type="submit" value="Add Room">
-
+        <input type="submit" value="Update Room">
     </form>

@@ -43,8 +43,64 @@ a{
 }
 
 a:hover{
-  color:rgb(211, 191, 8);
-}
+  color:rgb(211, 191, 8);}
+
+
+
+
+
+
+  .error
+  {
+      margin-bottom: 1rem;
+      padding :1rem 1.3rem;
+      background-color: pink;
+      border :1px solid red;
+  }
+  
+  form[id="deleteButtonForm"]
+  {
+      display:inline-block
+  }
+  
+  input[class="delButtons"]
+  {
+      background-color: white;
+      border:none;
+      cursor: pointer;
+      color:blue;
+      text-decoration: underline;
+  
+  }
+  
+  .rooms-container
+  {
+      border-bottom: 1px dashed #000;
+      padding-bottom:1.5rem;
+      margin-bottom:1.5rem;
+  }
+  
+  .profile-pic
+  {
+      max-width: 50%;
+  }
+  
+  .room-title
+  {
+      font-size:1.1rem;
+      color:#000; 
+      margin-right: 8px;
+  }
+  .edit-delete-button
+  {
+      display:inline-block;
+      text-decoration: none;
+      background-color:#000;
+      color:#fff;
+      padding:5px 10px; 
+  }
+
+
 /* ------------------------------------------------------------------------- */
 /* page header*/
 /* ------------------------------------------------------------------------- */

@@ -1,6 +1,20 @@
 const express = require('express')
 const router = express.Router();
 
+/*GENERAL ROUTES*/
+//Route to direct user to home page
+router.get("/",(req,res)=>
+{
+    res.render("general/index");
+});
+
+
+//Route to direct user to about us page
+router.get("/about",(req,res)=>
+{
+    res.render("general/about");
+});
+
 
 // HOME PAGE 
 router.get("/", (req, res) => {
@@ -21,6 +35,9 @@ router.get("/sign-in", (req, res) => {
 router.post("/sign-in", (req, res) => {
     // res.render();
 });
+
+
+
 
 // CONTACT US page
 router.get("/contact-us", (req, res) => {
