@@ -1,0 +1,28 @@
+
+    <h2 class="page-header"> Create New User</h2>
+    
+    <!-- url-encoded data form-->
+    <form method="POST" action="/user/register" enctype="multipart/form-data" class="signInBlock">
+
+        <label>First Name</label><br>
+        <input type="text" name="firstName" id="firstName" class="field-font"> <br>
+
+        <label>Last Name</label><br>
+        <input type="text" name="lastName" id="lastName" class="field-font"> <br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" id="email" class="field-font"> <br>
+        
+        <label>Password</label><br>
+        <input type="password" name="password" id="password"class="field-font"> <br>
+
+         <label>Confirm Password</label><br>
+        <input type="password" name="cpassword" id="cpassword"class="field-font"> <br>
+{{!--         
+        <label>Profile pic Upload</label><br>
+        <input type="file" name="profilePic" id="profilePic"class="field-font"> <br> --}}
+
+        <input type="submit" value="Add User" class="button margin">
+
+    </form>
+

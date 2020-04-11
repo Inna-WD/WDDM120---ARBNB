@@ -1,22 +1,37 @@
- <h2>Update Room</h2>
-    <form method="POST" action="">
+<h2 class="page-header">Update Room</h2>
+<form method="POST" action="/room/update/{{_id}}?method=PUT" class="signInBlock">
 
-        <label>Title</label>
-        <input type="text" name="title" id="title" > <br><br>
+<h2>Change the room parameters</h2>
+    <label>Title</label>
+    <br>
+    <input type="text" name="title" id="title" value="{{title}}" class="field-font"> <br><br>
 
-        <label>Description</label>
-        <textarea id="description" name="description"></textarea><br><br>
+    <label>Description</label>
+    <br>
+    <textarea id="description" name="description" class="field-font">{{description}} </textarea><br>
 
-        <label>Due Date</label>
-        <input type="date" name="dueDate" id="dueDate"> <br><br>
+    <label>Location</label>
+    <br>
+    <select name="location" class="field-font" value="{{location}}" class="field-font">
+        <option value="Ontario">Ontario</option>
+        <option value="Alberta">Alberta</option>
+        <option value="Manitoba">Manitoba</option>
+        <option value="Quebec">Quebec</option>
+    </select>
+    <br>
 
-        <label>Status</label>
-        <select name="status">
-            <option value="open">Open</option>
-            <option value="hold">On Hold</option>
-            <option value="completed">Completed</option>
-        </select>
-        <br><br>
 
-        <input type="submit" value="Update Room">
-    </form>
+    <label>Price in CAD</label> <br>
+    <input type="number" name="price" id="price" class="field-font" value="{{price}}">
+    <br>
+
+
+    <label>Status</label>
+    <br>
+    <select name="status" class="field-font" value="{{status}}" class="field-font">
+        <option value="Available">Available</option>
+        <option value="Reserved">Reserved</option>
+    </select>
+    <br>
+    <input type="submit" value="Update Room" class="button margin">
+</form>

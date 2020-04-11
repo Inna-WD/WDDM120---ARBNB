@@ -18,9 +18,13 @@ const userSchema = new Schema({
         type: String,
         require: true
     },
-    type: {
+    password: {
         type: String,
         default: "New"
+    },
+    profilePic:{
+        type: String,
+        require: false
     },
     dateCreated: {
         type: Date,
