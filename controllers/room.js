@@ -5,7 +5,7 @@ const router = express.Router();
 const roomModel = require("../models/room.js")
 
 
-//Route to direct use to Add Task form
+//Route to direct use to Add Room form
 router.get("/add", (req, res) => {
     res.render("Room/roomAddForm");
 });
@@ -16,22 +16,46 @@ router.post("/add", (req, res) => {
     const newUser = {
         title: req.body.title,
         description: req.body.description,
-        dueDate: req.body.dueDate,
-        priority: req.body.priority
+        location:req.body.location,
+        price: req.body.price,
+        status:req.body.status,
+
     }
 
     const room = new roomModel(newUser);
     room.save()
-        .then(()=>{
-           res.redirect("/room/list") 
+        .then(() => {
+            res.redirect("/room/list")
         })
         .catch(err => console.log(`Error inserting to the database: ${err} `));
 
 });
 
-////Route to fetch all tasks
+////Route to fetch all rooms
 router.get("/list", (req, res) => {
-    res.render("Room/roomDashboard");
+    roomModel.find()
+        .then((rooms) => {
+
+            // returning array will be called for each iteration
+            const filteredRoom = rooms.map(room => {
+                return {
+                    id: room._id,
+                    title: room.title,
+                    description: room.description,
+                    location:room.location,
+                    price: room.price,
+                    status:room.status
+                }
+            });
+
+
+            res.render("Room/roomDashboard", {
+                data: filteredRoom
+            });
+        })
+        .catch(err => console.log(`Error pulling from the database: ${err} `));
+
+ 
 
 });
 

@@ -11,14 +11,14 @@ const roomSchema = new Schema({
         require: true
     },
     price: {
-        type: number,
+        type: Number,
         require: true
     },
     location: {
         type: String,
         require: true
     },
-    type: {
+    status: {
         type: String,
         default: "Regular"
     },

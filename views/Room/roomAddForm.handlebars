@@ -1,32 +1,36 @@
-   <h2>Add Room</h2>
+   <h2 class="page-header">Add Room</h2>
     
-    <form method="POST" action="/room/add">
+    <form method="POST" action="/room/add" class="signInBlock">
 
         <label>Title</label>
-        <input type="text" name="title" id="title"> <br><br>
+        <br>
+        <input type="text" name="title" id="title" class="field-font"> <br>
 
         <label>Description</label>
-        <textarea id="description" name="description"></textarea><br><br>
+        <br>
+        <textarea id="description" name="description" class="field-font"></textarea><br>
 
-        <label>Due Date</label>
-        <input type="date" name="dueDate" id="dueDate"> <br><br>
+        <label>Price in CAD</label> <br>
+             <input type="number" name="price" id="price" class="field-font" value="0" >
+             <br>
 
-        <label>Priority</label>
-        <select name="priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="High">High</option>
+        <label>Location</label>
+        <br>
+        <select name="location"  class="field-font">
+            <option value="Ontario">Ontario</option>
+            <option value="Alberta">Alberta</option>
+            <option value="Manitoba">Manitoba</option>
+           <option value="Quebec">Quebec</option>
         </select>
-        <br><br>
+        <br>
+        <label>Status</label>
+        <br>
+       <select name="status" class="field-font">
+            <option value="Available">Available</option>
+            <option value="Reserved">Reserved</option>
+        </select>
+        <br>
 
-        <label>Status</label> : Open
-       <!-- <select name="status">
-            <option value="open">Open</option>
-            <option value="hold">On Hold</option>
-            <option value="completed">Completed</option>
-        </select>-->
-        <br><br>
-
-        <input type="submit" value="Add Room">
+        <input type="submit" value="Add Room" class="button margin">
 
     </form>

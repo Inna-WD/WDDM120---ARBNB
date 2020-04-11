@@ -1,58 +1,57 @@
-<h2>Room Dashboard</h2>
- 
- <section class="rooms-container">
-   
+<h2 class="page-header">Room Dashboard</h2>
 
-     <form method="POST" action="/room/search">
+<section class="rooms-container signInBlock">
+    <form method="POST" action="/room/search">
         <label>Search By</label>
-        <select name="room-search">
-                <option value="all">All rooms</option>
-                <option value="open">Open Rooms</option>
-                <option value="on-hold">On Hold Rooms</option>
-                <option value="closed">Closed Rooms</option>
-                <option value="pending">Pending Rooms</option>
-                <option value="low-priority">Low Priority</option>
-                <option value="medium-priority">Meidum Priority</option>
-                <option value="high-priority">High Priority</option>
+        <select name="room-search" class="field-font">
+            <option value="all">All rooms</option>
+            <option value="Available">Available</option>
+            <option value="Reserved">Reserved</option>
         </select>
-        <input type="submit" value="Search">
-     </form> <br><br>
+        
+
+        <input type="submit" value="Search"  class="edit-delete-button">
+    </form> 
+    <br><br>
 
     <table border="1" style="text-align: center;">
         <thead>
-                <th>Title</th>
-                <th>Priority</th>
-                <th>Status</th>
-                <th>Due Date</th>
-                <th>Operation</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Operation</th>
         </thead>
         <tbody>
-           
-                <tr>
-                   <td>
-                        <a href="/room/profile/{{this.id}}" class="room-title">Room Title Goes Here</a>
-                   </td>
-                   <td>
-                       <span>Priority</span>
-                      
-                   </td>
-                   <td>
-                        <span>Status</span>
-                   </td>
-                   <td>
-                       <span>Due Date</span>
-                   </td>
-                   <td>
-                        <a href="" class="edit-delete-button">Edit</a>
-                        <a href="" class="edit-delete-button">Delete</a>
-                   </td> 
-                </tr>
-    </tbody>
+            {{#each data}}
+            <tr>
+                <td>
+                    <a href="/room/profile/{{this.id}}" class="room-title">{{this.title}}</a>
+                </td>
+                <td>
+                    <span>{{this.description}}</span>
+                </td>
+                <td>
+                    <span>{{this.location}}</span>
+                </td>
+                <td>
+                    <span>{{this.price}}</span>
+                </td>
+                <td>
+                    <span>{{this.status}}</span>
+                </td>
+                <td>
+                    <a href="" class="edit-delete-button">Edit</a>
+                    <a href="" class="edit-delete-button">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+        {{/each }}
     </table>
- 
+
 </section>
 
-<div id="rooms-links-holder">
-    <a href="/room/add">Add a Room</a>
+<div id="rooms-links-holder" >
+    <a href="/room/add" class="button margin">Add a Room</a>
 </div>
-
