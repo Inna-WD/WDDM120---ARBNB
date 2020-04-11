@@ -11,9 +11,7 @@ app.use(express.static('public'));
 
 
 
-//This tells Express to set or register Handlebars as its' Template/View Engine
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+
 
 //parse application
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -35,12 +33,15 @@ console.log(`Connected to MongoDB`);
 .catch(err=>console.log(`Error occured when connected to db ${err}`));
 
 
+//This tells Express to set or register Handlebars as its' Template/View Engine
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 
 app.use("/",generalController);
 app.use("/",productController);
 app.use("/",featuredController);
-app.use("/",roomController);
+app.use("/room",roomController);
 app.use("/",(req,res)=>{
     res.render("general/404");
 });
